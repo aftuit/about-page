@@ -1,17 +1,18 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import LogoIcon from "../assets/icons/logo.svg?react";
 import SearchIcon from "../assets/icons/search.svg?react";
 import MoonIcon from "../assets/icons/moon.svg?react";
 import EyeIcon from "../assets/icons/eye.svg?react";
 import ReceiptIcon from "../assets/icons/receipt.svg?react";
-import { Dropdown } from "./ui/Dropdown";
+import EarthIcon from "../assets/icons/earth.svg?react";
+import DownChevronIcon from "../assets/icons/down-chevron.svg?react";
+import Dropdown from "./ui/Dropdown";
 
 export const Header = () => {
   return (
     <>
       <div className="w-full bg-light-gray">
-        <div className="container-wrapper">
+        <div className="container-wrapper font-medium text-sm">
           <div className="py-[38px] flex-between">
             <Link to="/">
               <LogoIcon />
@@ -34,7 +35,24 @@ export const Header = () => {
                 </button>
                 <span>Qabulga yozilish</span>
               </div>
-<Dropdown />
+              <Dropdown>
+                <div className="flex items-center gap-x-2.5">
+                  <button className="bg-white w-8 h-8 flex-center rounded-full">
+                    <EarthIcon />
+                  </button>
+                  <button className="flex-center gap-1">
+                    O’z <DownChevronIcon />
+                  </button>
+                </div>
+                <div className="py-1 z-20">
+                  <a href="#" className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Ру
+                  </a>
+                  <a href="#" className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    En
+                  </a>
+                </div>
+              </Dropdown>
             </div>
           </div>
         </div>

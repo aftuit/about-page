@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +7,7 @@
 
 :root {
   --primary: #003087;
-  --light-gray:#F5F7FA;
+  --light-gray: #F5F7FA;
   --gray: #F0F0F0;
   --text-muted: #767676;
   --danger: #FF4545;
@@ -21,7 +22,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.container-wrapper{
+.container-wrapper {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
@@ -30,34 +31,74 @@
 .bg-primary {
   background-color: var(--primary) !important;
 }
-.bg-light-gray{
+
+.bg-light-gray {
   background-color: var(--light-gray) !important;
 }
-.bg-gray{
+
+.bg-gray {
   background-color: var(--gray) !important;
 }
+
 .bg-dark-primary {
   background-color: var(--dark-primary) !important;
 }
-.text-primary{
+
+.text-primary {
   color: var(--primary) !important;
 }
-.text-danger{
+
+.text-danger {
   color: var(--danger) !important;
 }
-.text-muted{
+
+.text-muted {
   color: var(--text-muted) !important;
 }
-.text-light-primary{
+
+.text-light-primary {
   color: var(--text-light-primary) !important;
 }
-.flex-center{
+
+.text-inter {
+  font-family: "Inter", system-ui;
+}
+
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.flex-between{
+
+.flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.line {
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: -2px;
+}
+
+.animate {
+  animation: move-forever 10s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(65%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-70%, 0, 0);
+  }
 }
