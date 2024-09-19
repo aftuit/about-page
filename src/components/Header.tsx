@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import { Link } from "react-router-dom";
 import LogoIcon from "../assets/icons/logo.svg?react";
@@ -15,7 +15,16 @@ export const Header = () => {
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
-  const toggleSearch = () => setShowSearchbar(!showSearchbar);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const toggleSearch = () => {
+    setShowSearchbar(!showSearchbar);
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, 0);
+  };
   const toggleDark = () => setIsDark(!isDark);
 
   return (
@@ -62,14 +71,12 @@ export const Header = () => {
                 <div className="py-1 z-20">
                   <a
                     href="#"
-                    className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
+                    className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     Ру
                   </a>
                   <a
                     href="#"
-                    className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
+                    className="block px-10 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     En
                   </a>
                 </div>
@@ -90,6 +97,7 @@ export const Header = () => {
           onClick={(evt) => evt.stopPropagation()}
         >
           <input
+            ref={inputRef}
             type="text"
             className="block outline-none w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white"
             placeholder="Qidiruv..."
