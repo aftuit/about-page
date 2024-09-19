@@ -9,10 +9,6 @@ const Dropdown = ({ children, hover }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
-  };
-
   const toggleOnHover = () => {
     if (!hover) return;
     setIsOpen((val) => !val);
@@ -41,13 +37,14 @@ const Dropdown = ({ children, hover }: DropdownProps) => {
       onMouseEnter={toggleOnHover}
       onMouseLeave={toggleOnHover}
     >
-      <div onClick={toggleDropdown}>{React.Children.toArray(children)[0]}</div>
+      <div onClick={() => setIsOpen(true)}>
+        {React.Children.toArray(children)[0]}
+      </div>
       {isOpen && (
         <div
           className={`absolute bg-white border rounded shadow-lg`}
-          // onMouseEnter={() => setIsOpen(true)}
         >
-          {React.Children.toArray(children).slice(1)} {/* The content */}
+          {React.Children.toArray(children).slice(1)}
         </div>
       )}
     </div>

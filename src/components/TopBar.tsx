@@ -36,7 +36,6 @@ export const TopBar = () => {
         <div className="w-full flex-between text-white">
           <div>
             <span className="text-nowrap ">
-              {/* 12:47:41 (GMT+0) 04.09.2024 */}
               {formatTime(time)}
             </span>
           </div>
