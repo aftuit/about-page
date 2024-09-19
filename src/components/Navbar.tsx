@@ -7,7 +7,7 @@ export const Navbar = () => {
       <div className="container-wrapper">
         <div className="flex-between">
           {menuItems.map((menu: string) => (
-            <Dropdown key={menu}>
+            <Dropdown key={menu} hover>
               <div className="flex-center gap-x-1.5 text-[15px] uppercase cursor-pointer">
                 <span className="font-semibold">{menu}</span>
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -2,19 +2,28 @@ import React, { useState, useRef, useEffect } from "react";
 
 type DropdownProps = {
   children: React.ReactNode;
+  hover: boolean;
 };
 
-const Dropdown = ({ children }: DropdownProps) => {
+const Dropdown = ({ children, hover }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
-    setIsOpen(prev => !prev);
+    setIsOpen((prev) => !prev);
+  };
+
+  const toggleOnHover = () => {
+    if (!hover) return;
+    setIsOpen((val) => !val);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -26,10 +35,18 @@ const Dropdown = ({ children }: DropdownProps) => {
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={toggleOnHover}
+      onMouseLeave={toggleOnHover}
+    >
       <div onClick={toggleDropdown}>{React.Children.toArray(children)[0]}</div>
       {isOpen && (
-        <div className="absolute mt-1 bg-white border rounded shadow-lg">
+        <div
+          className={`absolute bg-white border rounded shadow-lg`}
+          // onMouseEnter={() => setIsOpen(true)}
+        >
           {React.Children.toArray(children).slice(1)} {/* The content */}
         </div>
       )}

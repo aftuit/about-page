@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="w-full">
+        <div className="w-full overflow-x-hidden">
           <TopBar />
           <Header />
           <Navbar />

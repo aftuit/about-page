@@ -18,14 +18,18 @@ export const Frame = () => {
           </div>
           <div className="border-2 border-white rounded-[90px] flex-center py-2.5 pl-5 pr-2">
             <MailIcon />
-            <span className="text-xl ml-[26px] mr-[47px] text-inter">infosec@exat.uz</span>
+            <span className="text-xl ml-[26px] mr-[47px] text-inter">
+              infosec@exat.uz
+            </span>
             <button>
               <RightIcon />
             </button>
           </div>
           <div className="phone flex-center gap-[27px]">
             <LocationIcon />
-            <span className="text-xl text-inter">Tashkent sh. Chilonzor t. Qirq-qiz ko‘chasi, 10A</span>
+            <span className="text-xl text-inter">
+              Tashkent sh. Chilonzor t. Qirq-qiz ko‘chasi, 10A
+            </span>
           </div>
         </div>
         <div className="mt-[86px] flex-center gap-6">
@@ -45,10 +49,12 @@ export const Frame = () => {
         <div className="mt-[72px] text-white text-center">
           <p>
             2024 
-            <span className="text-gray-500 font-bold text-inter">©</span>
+            <span className="text-gray-500 font-bold text-inter mx-1">©</span>
             "Xavfsiz shahar" markazining rasmiy sayti.
           </p>
-          <p className="mt-[13px] text-inter">Oxirgi yangilanish 2024-09-05 22:03:37</p>
+          <p className="mt-[13px] text-inter">
+            Oxirgi yangilanish 2024-09-05 22:03:37
+          </p>
         </div>
       </div>
     </div>
