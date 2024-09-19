@@ -43,6 +43,9 @@
 .bg-dark-primary {
   background-color: var(--dark-primary) !important;
 }
+.bg-linear{
+  background: linear-gradient(90deg, #003087 0%, #000C21 100%) !important;
+}
 
 .text-primary {
   color: var(--primary) !important;

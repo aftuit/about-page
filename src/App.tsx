@@ -5,32 +5,9 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Frame } from "./components/Frame";
 import { AboutPage } from "./pages/About";
+import { NewsPage } from "./pages/News";
 import { NotFoundPage } from "./pages/NotFound";
-import { Breadcrumb } from "./components/ui/Breadcrumb";
-
 function App() {
-  const links = [
-    {
-      name: "Bosh sahifa",
-      active: false,
-      path: "/home",
-    },
-    {
-      name: "Biz haqimizda",
-      active: true,
-      path: "/about",
-    },
-    {
-      name: "Vazifalar funksiyalar",
-      active: false,
-      path: "/tasks",
-    },
-    {
-      name: "Rahbariyat",
-      active: false,
-      path: "/leadership",
-    },
-  ];
   return (
     <>
       <BrowserRouter>
@@ -38,14 +15,12 @@ function App() {
           <TopBar />
           <Header />
           <Navbar />
-          <main className="bg-white pt-9 pb-[87px]">
-            <div className="container-wrapper">
-              <Breadcrumb items={links} />
-            </div>
+          <main>
             <Routes>
               <Route path="/" element={<Navigate to={"/about"} />} />
               <Route path="/*" element={<NotFoundPage />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/news" element={<NewsPage />} />
             </Routes>
           </main>
           <footer>
