@@ -19,8 +19,22 @@ import elem10 from "../assets/icons/elements/elem10.svg?react";
 import elem11 from "../assets/icons/elements/elem11.svg?react";
 import elem12 from "../assets/icons/elements/elem12.svg?react";
 import elem13 from "../assets/icons/elements/elem13.svg?react";
+import Andijon from "../assets/images/regions/andijon.png"
+import Buxoro from "../assets/images/regions/Buxoro.png"
+import Samarqand from "../assets/images/regions/Samarqand.png"
+import Qashqadaryo from "../assets/images/regions/Qashqadaryo.png"
+import Surxondaryo from "../assets/images/regions/Surxondaryo.png"
+import Xorazm from "../assets/images/regions/Xorazm.png"
+import Jizzax from "../assets/images/regions/Jizzax.png"
+import Navoiy from "../assets/images/regions/Navoiy.png"
+import Sirdaryo from "../assets/images/regions/Sirdaryo.png"
+import Toshkent from "../assets/images/regions/Toshkent.png"
+import Toshkent_vil from "../assets/images/regions/Toshkent_vil.png"
+import Namangan from "../assets/images/regions/Namangan.png"
+import Fargona from "../assets/images/regions/Fargona.png"
+import Qoraqalpogiston from "../assets/images/regions/Qoraqalpogiston.png"
 
-import { INew, IGallery, IElement } from "./interface";
+import { INew, IGallery, IElement, IRegion } from "./interface";
 
 export const footerLinks = [
   {
@@ -462,3 +476,118 @@ export const usefulllinks = [
     ],
   },
 ];
+
+export const regions: IRegion[] = [
+  {
+    name: "Qoraqalpog'iston",
+    responsible_for: {
+      image: Qoraqalpogiston,
+      fullname: "Kaniyazov Jumaniyaz Tileuniyazovich",
+      profession: "Qoraqalpog‘iston Respublikasi bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Andijon',
+    responsible_for: {
+      image: Andijon,
+      fullname: "Abduxalilov Boburjon Zuxridin o‘g‘li",
+      profession: "Andijon viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Qashqadaryo',
+    responsible_for: {
+      image: Qashqadaryo,
+      fullname: "Avazov Davron Shukrullo o‘g‘li",
+      profession: "Qashqadaryo viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Samarqand',
+    responsible_for: {
+      image: Samarqand,
+      fullname: "Kayumov Alisher Amrilloyevich",
+      profession: "Samarqand viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Toshkent',
+    responsible_for: {
+      image: Toshkent,
+      fullname: "Yurov Sergey Aleksandrovich",
+      profession: "Toshkent shahri bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Xorazm',
+    responsible_for: {
+      image: Xorazm,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Xorazm viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Buxoro',
+    responsible_for: {
+      image: Buxoro,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Buxoro viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Navoiy',
+    responsible_for: {
+      image: Navoiy,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Navoiy viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Sirdaryo',
+    responsible_for: {
+      image: Sirdaryo,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Sirdaryo viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Toshkent viloyati',
+    responsible_for: {
+      image: Toshkent_vil,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Toshkent viloyati viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Jizzax',
+    responsible_for: {
+      image: Jizzax,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Jizzax viloyati viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Namangan',
+    responsible_for: {
+      image: Namangan,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Namangan viloyati viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: 'Surxondaryo',
+    responsible_for: {
+      image: Surxondaryo,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Surxondaryo viloyati viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+  {
+    name: "Farg'ona",
+    responsible_for: {
+      image: Fargona,
+      fullname: "Xujayev Turg‘un Kazakovich",
+      profession: "Fargona viloyati viloyati bo‘yicha sektor Bosh mutaxassisi"
+    }
+  },
+]

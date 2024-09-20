@@ -14,3 +14,11 @@ export interface IElement {
   icon: React.ComponentType;
   text: string;
 }
+export interface IRegion {
+  name: string,
+  responsible_for: {
+    image: string,
+    fullname: string,
+    profession: string
+  }
+}
