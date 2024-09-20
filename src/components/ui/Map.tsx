@@ -214,7 +214,7 @@ const Map = ({ selectRegion, region }: IProps) => {
         cx="44.754"
         cy="32.885"
         r="29.755"
-        fill="white"
+        fill={region.name === "Qoraqalpog'iston" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -222,14 +222,21 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter0_d_118_7705)"
         transform="matrix(1, 0, 0, 1, 25.689123536484203, 17.441049835697584)"
       >
-        <circle cx="19.461" cy="15.6419" r="15.3282" fill="#ADCAFF" />
+        <circle
+          cx="19.461"
+          cy="15.6419"
+          r="15.3282"
+          className={region.name === "Qoraqalpog'iston" ? "pulse lg" : ""}
+          fill={region.name === "Qoraqalpog'iston" ? "#ADCAFF" : "#33599F"}
+        />
+        {/* #ADCAFF */}
       </g>
       {/* Navoiy */}
       <circle
         cx="293.249"
         cy="122.649"
         r="18.033"
-        fill="black"
+        fill={region.name === "Navoiy" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -237,14 +244,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter0_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="33.0049" cy="18.1194" r="9.01657" fill="#33599F" />
+        <circle
+          cx="33.0049"
+          cy="18.1194"
+          r="9.01657"
+          className={region.name === "Navoiy" ? "pulse" : ""}
+          fill={region.name === "Navoiy" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Buxoro */}
       <circle
         cx="275.216"
         cy="254.291"
         r="14.427"
-        fill="black"
+        fill={region.name === "Buxoro" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -252,14 +265,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter1_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="14.975" cy="149.761" r="7.21326" fill="#33599F" />
+        <circle
+          cx="14.975"
+          cy="149.761"
+          r="7.21326"
+          className={region.name === "Buxoro" ? "pulse" : ""}
+          fill={region.name === "Buxoro" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Qashqadaryo */}
       <circle
         cx="395.138"
         cy="330.932"
         r="14.427"
-        fill="black"
+        fill={region.name === "Qashqadaryo" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -267,14 +286,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter2_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="134.895" cy="226.402" r="7.21326" fill="#33599F" />
+        <circle
+          cx="134.895"
+          cy="226.402"
+          r="7.21326"
+          className={region.name === "Qashqadaryo" ? "pulse" : ""}
+          fill={region.name === "Qashqadaryo" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Surxondaryo */}
       <circle
         cx="455.548"
         cy="379.622"
         r="14.427"
-        fill="black"
+        fill={region.name === "Surxondaryo" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -282,14 +307,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter3_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="195.305" cy="275.092" r="7.21326" fill="#33599F" />
+        <circle
+          cx="195.305"
+          cy="275.092"
+          r="7.21326"
+          className={region.name === "Surxondaryo" ? "pulse" : ""}
+          fill={region.name === "Surxondaryo" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Jizzax */}
       <circle
         cx="462.762"
         cy="232.652"
         r="9.017"
-        fill="black"
+        fill={region.name === "Jizzax" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -297,14 +328,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter4_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="202.518" cy="128.122" r="4.50829" fill="#33599F" />
+        <circle
+          cx="202.518"
+          cy="128.122"
+          r="4.50829"
+          className={region.name === "Jizzax" ? "pulse" : ""}
+          fill={region.name === "Jizzax" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Toshkent */}
       <circle
         cx="561.041"
         cy="183.962"
         r="9.017"
-        fill="black"
+        fill={region.name === "Toshkent" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -312,14 +349,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter5_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="300.797" cy="79.4321" r="4.50829" fill="#33599F" />
+        <circle
+          cx="300.797"
+          cy="79.4321"
+          r="4.50829"
+          className={region.name === "Toshkent" ? "pulse" : ""}
+          fill={region.name === "Toshkent" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Namangan */}
       <circle
         cx="634.076"
         cy="197.487"
         r="9.017"
-        fill="black"
+        fill={region.name === "Namangan" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -327,14 +370,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter6_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="373.833" cy="92.9568" r="4.50829" fill="#33599F" />
+        <circle
+          cx="373.833"
+          cy="92.9568"
+          r="4.50829"
+          className={region.name === "Namangan" ? "pulse" : ""}
+          fill={region.name === "Namangan" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Andijon */}
       <circle
         cx="687.275"
         cy="204.7"
         r="9.017"
-        fill="black"
+        fill={region.name === "Andijon" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -342,14 +391,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter7_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="427.032" cy="100.17" r="4.50829" fill="#33599F" />
+        <circle
+          cx="427.032"
+          cy="100.17"
+          r="4.50829"
+          className={region.name === "Andijon" ? "pulse" : ""}
+          fill={region.name === "Andijon" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Farg'ona */}
       <circle
         cx="652.109"
         cy="226.34"
         r="9.017"
-        fill="black"
+        fill={region.name === "Farg'ona" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -357,14 +412,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter8_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="391.868" cy="121.81" r="4.50829" fill="#33599F" />
+        <circle
+          cx="391.868"
+          cy="121.81"
+          r="4.50829"
+          className={region.name === "Farg'ona" ? "pulse" : ""}
+          fill={region.name === "Farg'ona" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Sirdaryo */}
       <circle
         cx="514.155"
         cy="226.34"
         r="7.213"
-        fill="black"
+        fill={region.name === "Sirdaryo" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -372,14 +433,20 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter9_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="253.913" cy="121.81" r="3.60663" fill="#33599F" />
+        <circle
+          cx="253.913"
+          cy="121.81"
+          r="3.60663"
+          className={region.name === "Sirdaryo" ? "pulse" : ""}
+          fill={region.name === "Sirdaryo" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
       {/* Samarqand */}
       <circle
         cx="409.563"
         cy="266.013"
         r="12.623"
-        fill="black"
+        fill={region.name === "Samarqand" ? "white" : "black"}
         fill-opacity="0.1"
         transform="matrix(1, 0, 0, 1, -1.1368683772161603e-13, 0)"
       />
@@ -387,7 +454,13 @@ const Map = ({ selectRegion, region }: IProps) => {
         filter="url(#filter10_d_118_7706)"
         transform="matrix(1, 0, 0, 1, 260.2429543173753, 104.53018344238671)"
       >
-        <circle cx="149.321" cy="161.483" r="6.3116" fill="#33599F" />
+        <circle
+          cx="149.321"
+          cy="161.483"
+          r="6.3116"
+          className={region.name === "Samarqand" ? "pulse" : ""}
+          fill={region.name === "Samarqand" ? "#ADCAFF" : "#33599F"}
+        />
       </g>
     </svg>
   );
