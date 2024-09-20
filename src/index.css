@@ -162,6 +162,12 @@
   -o-animation: animation-pulse 800ms linear infinite;
   animation: animation-pulse 800ms linear infinite;
 }
+.pulse.lg{
+  -webkit-animation: animation-pulse-lg 800ms linear infinite;
+  -moz-animation: animation-pulse-lg 800ms linear infinite;
+  -o-animation: animation-pulse-lg 800ms linear infinite;
+  animation: animation-pulse-lg 800ms linear infinite;
+}
 
 .animate {
   animation: move-forever 10s cubic-bezier(.55, .5, .45, .5) infinite;
@@ -182,6 +188,20 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes animation-pulse-lg {
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+  50% {
+    r: 10;
+    opacity: 0.5;
+  }
+  100% {
+    r: 20;
+    opacity: 0;
+  }
+}
 
 @-moz-keyframes animation-pulse {
   0% {
@@ -197,6 +217,20 @@
     opacity: 0;
   }
 }
+@-moz-keyframes animation-pulse-lg {
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+  50% {
+    r: 10;
+    opacity: 0.5;
+  }
+  100% {
+    r: 18;
+    opacity: 0;
+  }
+}
 @keyframes animation-pulse {
   0% {
     r: 3;
@@ -208,6 +242,20 @@
   }
   100% {
     r: 10;
+    opacity: 0;
+  }
+}
+@keyframes animation-pulse-lg {
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+  50% {
+    r: 10;
+    opacity: 0.5;
+  }
+  100% {
+    r: 18;
     opacity: 0;
   }
 }
