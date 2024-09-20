@@ -36,7 +36,7 @@ export const NewsPage = () => {
             ))}
             <div className="flex flex-col justify-between">
               {[1, 2, 3, 4, 5].map((item: number) => (
-                <div key={item} className="flex-center gap-[14px] h-[70px] px-[19px] bg-light-gray rounded-md group hover:bg-blue-900">
+                <div key={item} className="cursor-pointer flex-center gap-[14px] h-[70px] px-[19px] bg-light-gray rounded-md group hover:bg-blue-900">
                   <div className="font-bold text-primary ">
                     <h3 className="text-3xl group-hover:text-white">12</h3>
                     <div className="text-lg group-hover:text-white">Sen</div>
