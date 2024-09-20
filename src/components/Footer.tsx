@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { links } from "../utils/const";
+import { footerLinks } from "../utils/mock";
 import LinkIcon from "../assets/icons/link.svg?react";
 
 export const Footer = () => {
@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className="w-full bg-primary pt-[67px] pb-[93px] text-inter">
       <div className="container-wrapper">
         <div className="flex gap-x-10 justify-between">
-          {links.map((link: any) => (
+          {footerLinks.map((link: any) => (
             <div  key={link.name} className={`flex flex-col justify-between ${link.name === 'first' ? 'w-5/12' : link.name === 'second' ? 'pl-8 line w-7/12': 'pl-8 line'}`}>
               {link.data.map((item: any, index: number) => (
                 <div key={item.title} className={link.name === 'second' && index > 0 ? 'mt-[63px]': ''}>
